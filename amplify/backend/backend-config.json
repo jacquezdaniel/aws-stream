@@ -1,0 +1,17 @@
+{
+    "video": {
+        "mylivestream": {
+            "service": "video",
+            "serviceType": "livestream",
+            "providerPlugin": "awscloudformation",
+            "sha": "fb598a5c62e54e1102a81a16e30bad7da205cdd6"
+        }
+    },
+    "hosting": {
+        "amplifyhosting": {
+            "service": "amplifyhosting",
+            "providerPlugin": "awscloudformation",
+            "type": "manual"
+        }
+    }
+}
