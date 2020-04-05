@@ -51,7 +51,7 @@ function App() {
   return (
     <div>
       <nav style={nav}>
-        <p style={navHeading}>Live Streaming with React & AWS</p>
+        <p style={navHeading}>High Fever Stream</p>
       </nav>
       <div style={container}>
         <VideoPlayer {...videoJsOptions} />
