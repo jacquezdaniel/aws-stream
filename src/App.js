@@ -1,6 +1,8 @@
 import React from "react";
 import videojs from "video.js";
 import awsvideoconfig from "./aws-video-exports";
+import "../node_modules/materialize-css/dist/css/materialize.min.css";
+import "../node_modules/materialize-css/dist/js/materialize.min.js";
 import "./App.css";
 import "video.js/dist/video-js.css";
 
@@ -21,7 +23,7 @@ class VideoPlayer extends React.Component {
         <div
           data-vjs-player
           style={{
-            width: 960,
+            maxWidth: 960,
             height: 540,
           }}
         >
@@ -49,29 +51,22 @@ const videoJsOptions = {
 
 function App() {
   return (
-    <div>
-      <nav style={nav}>
-        <p style={{ navHeading }}>High Fever Live</p>
+    <>
+      <nav>
+        <div className="nav-wrapper white">
+          <a href="/" id="nav" className="brand-logo black-text">
+            High Fever Live
+          </a>
+        </div>
       </nav>
-      <div style={container}>
-        <VideoPlayer {...videoJsOptions} />
+      <div id="vContainer" className="container">
+        <VideoPlayer id="vPlayer" {...videoJsOptions} />
       </div>
-    </div>
+      <div className="container">
+        <h5 className="center">Chat Room (Coming Soon)</h5>
+      </div>
+    </>
   );
 }
-
-const nav = {
-  padding: "0px 40px",
-  height: 60,
-  borderBottom: "1px solid #ddd",
-  display: "flex",
-  alignItems: "center",
-};
-const container = {
-  paddingTop: 40,
-  width: 960,
-  margin: "0 auto",
-};
-const navHeading = { margin: 0, fontSize: 18 };
 
 export default App;
