@@ -51,7 +51,7 @@ function App() {
   return (
     <div>
       <nav style={nav}>
-        <p style={navHeading}>High Fever Stream</p>
+        <p style={{ navHeading }}>High Fever Live</p>
       </nav>
       <div style={container}>
         <VideoPlayer {...videoJsOptions} />
@@ -67,7 +67,11 @@ const nav = {
   display: "flex",
   alignItems: "center",
 };
-const container = { paddingTop: 40, width: 960, margin: "0 auto" };
+const container = {
+  paddingTop: 40,
+  width: 960,
+  margin: "0 auto",
+};
 const navHeading = { margin: 0, fontSize: 18 };
 
 export default App;
