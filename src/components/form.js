@@ -41,8 +41,9 @@ export default class Form extends Component {
     if (event.key !== "Enter") return;
     this.handleSend();
   }
+
   listenMessages() {
-    this.messageRef.limitToLast(10).on("value", (message) => {
+    this.messageRef.limitToLast(50).on("value", (message) => {
       this.setState({
         list: Object.values(message.val()),
       });
