@@ -1,6 +1,7 @@
 import React from "react";
 import videojs from "video.js";
 import awsvideoconfig from "./aws-video-exports";
+import Chat from "./components/chat";
 import "../node_modules/materialize-css/dist/css/materialize.min.css";
 import "../node_modules/materialize-css/dist/js/materialize.min.js";
 import "./App.css";
@@ -74,14 +75,14 @@ function App() {
           responsiveThreshold: 0,
         }}
       />
-      <div id="vSection" className="section black">
+      <div id="vSection" className="section">
         <div className="row">
           <div className="col s12 m6">
             <VideoPlayer id="vPlayer" {...videoJsOptions} />
           </div>
           <div className="col s12 m6">
             <p className="white-text center">
-              Chat Room (Coming Soon... Sorry LOL)
+              <Chat />
             </p>
           </div>
         </div>
