@@ -66,7 +66,10 @@ export default class Form extends Component {
             onChange={this.handleChange.bind(this)}
             onKeyPress={this.handleKeyPress.bind(this)}
           />
-          <button className="form__button" onClick={this.handleSend.bind(this)}>
+          <button
+            className="black waves-effect waves-light btn"
+            onClick={this.handleSend.bind(this)}
+          >
             send
           </button>
         </div>

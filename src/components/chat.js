@@ -21,7 +21,6 @@ class Chat extends Component {
 
   handleSignIn() {
     const provider = new firebase.auth.GoogleAuthProvider();
-    provider.addScope("profile");
     firebase.auth().signInWithPopup(provider);
   }
 
@@ -32,17 +31,21 @@ class Chat extends Component {
   render() {
     return (
       <div className="app">
+        <p className="black-text">
+          If you want your name to display... sign in! If not, you will remain
+          The Plague :)
+        </p>
         <div>
           {!this.state.user ? (
             <button
-              className="app__button"
+              className="black waves-effect waves-light btn-large"
               onClick={this.handleSignIn.bind(this)}
             >
               Sign in
             </button>
           ) : (
             <button
-              className="app__button"
+              className="black waves-effect waves-light btn-large"
               onClick={this.handleLogOut.bind(this)}
             >
               Logout
