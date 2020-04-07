@@ -53,13 +53,20 @@ const videoJsOptions = {
 function App() {
   return (
     <>
-      <nav>
-        <div className="nav-wrapper black">
-          <a href="/" id="nav" className="brand-logo center" alt="High Fever">
-            <img src="fever.png" width="100" height="64" alt="High Fever"></img>
-          </a>
-        </div>
-      </nav>
+      <div className="navbar-fixed">
+        <nav>
+          <div className="nav-wrapper black">
+            <a href="/" id="nav" className="brand-logo center" alt="High Fever">
+              <img
+                src="fever.png"
+                width="100"
+                height="64"
+                alt="High Fever"
+              ></img>
+            </a>
+          </div>
+        </nav>
+      </div>
       <Parallax
         id="parallax"
         image={<img alt="" src="corona.jpg" />}
@@ -67,12 +74,17 @@ function App() {
           responsiveThreshold: 0,
         }}
       />
-      <div className="section orange">
-        <h5 className="center white-text">Chat Room (Coming Soon)</h5>
-        <br />
-      </div>
       <div id="vSection" className="section black">
-        <VideoPlayer id="vPlayer" {...videoJsOptions} />
+        <div className="row">
+          <div className="col s12 m6">
+            <VideoPlayer id="vPlayer" {...videoJsOptions} />
+          </div>
+          <div className="col s12 m6">
+            <p className="white-text center">
+              Chat Room (Coming Soon... Sorry LOL)
+            </p>
+          </div>
+        </div>
       </div>
     </>
   );
